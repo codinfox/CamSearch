@@ -120,7 +120,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bBd-dv-P8e"/>
-                                    <barButtonItem systemItem="done" id="G82-7X-vlh">
+                                    <barButtonItem systemItem="search" id="G82-7X-vlh">
                                         <connections>
                                             <action selector="donePressed:" destination="I0H-9L-s6d" id="PIj-3p-u8n"/>
                                         </connections>

@@ -12,6 +12,8 @@
 
 - (id)initWithImageView: (UIImageView *)imageView;
 
++ (NSString *)convertImageToBase64: (UIImage *)image;
+
 - (CGFloat)scaleRatio;
 - (CGRect)scaleFrame;
 - (UIImage *)cropImageWithRect: (CGRect)rect;

@@ -7,9 +7,16 @@
 //
 
 #import "ImageCutting.h"
+#import "NSData+Base64.h"
 
 @implementation ImageCutting {
     UIImageView * _imageView;
+}
+
++ (NSString *)convertImageToBase64:(UIImage *)image {
+    NSData * imageData = UIImageJPEGRepresentation(image, 1.0);
+    NSString * base64 = [imageData base64EncodingWithLineLength:0];
+    return base64;
 }
 
 - (id)initWithImageView:(UIImageView *)imageView {

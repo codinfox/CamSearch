@@ -83,7 +83,9 @@
 
 - (IBAction)donePressed:(id)sender {
     [[[UIAlertView alloc] initWithTitle:@"Success" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil] show];
-    self.imageView.image = [ic cropImageWithRect:isv.selectedRect];
+    UIImage * image = [ic cropImageWithRect:isv.selectedRect];
+    NSString * string = [ImageCutting convertImageToBase64:image];
+    NSLog(@"%@", string);
 }
 
 

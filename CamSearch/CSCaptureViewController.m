@@ -9,6 +9,7 @@
 #import "CSCaptureViewController.h"
 #import "ImageSelectView.h"
 #import "ImageCutting.h"
+#import "NetConn.h"
 
 @interface CSCaptureViewController ()
 
@@ -86,8 +87,21 @@
 - (IBAction)donePressed:(id)sender {
 //    [[[UIAlertView alloc] initWithTitle:@"Success" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil] show];
 //    UIImage * image = [ic cropImageWithRect:isv.selectedRect];
-    [self showWaitingView];
     
+    [self sendRequest];
+    [self showWaitingView];
+}
+
+- (void)sendRequest {
+    dispatch_queue_t reqQueue = dispatch_queue_create("netConn", NULL);
+    dispatch_async(reqQueue, ^{
+        NetConn * conn = [[NetConn alloc] initWithImage:self.image];
+        [conn send];
+        [conn retrieve];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self requestDidProcessed];
+        });
+    });
 }
 
 - (void)showWaitingView {
@@ -107,6 +121,10 @@
 //    indicator.center = CGPointMake(av.frame.size.width/2, 100);
 //    NSLog(@"%f", av.frame.size.width);
 
+}
+
+- (void)requestDidProcessed {
+    [self dismissWaitingView];
 }
 
 - (void)dismissWaitingView {

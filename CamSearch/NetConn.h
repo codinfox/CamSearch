@@ -10,4 +10,8 @@
 
 @interface NetConn : NSObject
 
+- (id)initWithImage: (UIImage *)image;
+- (void)send;
+- (NSArray *)retrieve;
+
 @end

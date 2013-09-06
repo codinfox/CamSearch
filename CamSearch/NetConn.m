@@ -7,7 +7,26 @@
 //
 
 #import "NetConn.h"
+#import "ImageCutting.h"
 
-@implementation NetConn
+@implementation NetConn {
+    UIImage * _image;
+}
+
+- (id)initWithImage:(UIImage *)image {
+    if (self = [super init]) {
+        _image = image;
+    }
+    return self;
+}
+
+- (void)send {
+    NSString * base64 = [ImageCutting convertImageToBase64:_image];
+//    NSLog(@"%@", base64);
+}
+
+- (NSArray *)retrieve {
+    return nil;
+}
 
 @end

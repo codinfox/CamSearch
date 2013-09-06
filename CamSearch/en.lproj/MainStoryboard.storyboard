@@ -205,6 +205,7 @@
         <class className="CSCaptureViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CSCaptureViewController.h"/>
             <relationships>
+                <relationship kind="action" name="donePressed:"/>
                 <relationship kind="action" name="editPressed:"/>
                 <relationship kind="action" name="escape"/>
                 <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>

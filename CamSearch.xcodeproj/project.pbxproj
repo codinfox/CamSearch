@@ -37,6 +37,7 @@
 		B57F608A17D8608E00F3A5D6 /* CSCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */; };
 		B57F608D17D863CF00F3A5D6 /* nav-item-back.png in Resources */ = {isa = PBXBuildFile; fileRef = B57F608B17D863CF00F3A5D6 /* nav-item-back.png */; };
 		B57F608E17D863CF00F3A5D6 /* nav-item-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B57F608C17D863CF00F3A5D6 /* nav-item-back@2x.png */; };
+		B57F609117D8DE4F00F3A5D6 /* ImageSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCaptureViewController.m; sourceTree = "<group>"; };
 		B57F608B17D863CF00F3A5D6 /* nav-item-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-item-back.png"; sourceTree = "<group>"; };
 		B57F608C17D863CF00F3A5D6 /* nav-item-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-item-back@2x.png"; sourceTree = "<group>"; };
+		B57F608F17D8DE4F00F3A5D6 /* ImageSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSelectView.h; sourceTree = "<group>"; };
+		B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSelectView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				B57F608617D8264100F3A5D6 /* CSAboutViewController.m */,
 				B57F608817D8608E00F3A5D6 /* CSCaptureViewController.h */,
 				B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */,
+				B57F608F17D8DE4F00F3A5D6 /* ImageSelectView.h */,
+				B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */,
 			);
 			path = CamSearch;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				B57F604017D80F2500F3A5D6 /* CSViewController.m in Sources */,
 				B57F608717D8264100F3A5D6 /* CSAboutViewController.m in Sources */,
 				B57F608A17D8608E00F3A5D6 /* CSCaptureViewController.m in Sources */,
+				B57F609117D8DE4F00F3A5D6 /* ImageSelectView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +528,7 @@
 				B57F605A17D80F2500F3A5D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B57F605B17D80F2500F3A5D6 /* Build configuration list for PBXNativeTarget "CamSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				B57F605D17D80F2500F3A5D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

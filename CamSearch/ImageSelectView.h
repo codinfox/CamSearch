@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class CSCaptureViewController;
+
 @interface ImageSelectView : UIView
 
 - (CGRect)selectedRect;
+- (void)setConfineRect: (CGRect)rect;
 
 @end

@@ -12,6 +12,7 @@
     CGPoint _beginPoint;
     CGPoint _endPoint;
     CGRect _selectedRect;
+    CGRect _confineRect;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -46,22 +47,30 @@
 #pragma mark - Gestures
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch * touch = [touches anyObject];
-    _beginPoint = [touch locationInView:self];
+    CGPoint point = [touch locationInView:self];
+    if (CGRectContainsPoint(_confineRect, point)) {
+        _beginPoint = point;
+    }
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch * touch = [touches anyObject];
-    _endPoint = [touch locationInView:self];
-    if (_endPoint.x < 0 || _endPoint.x > 320 || _endPoint.y < 0 || _endPoint.y > 480) {
-        return;
+    CGPoint point = [touch locationInView:self];
+    if (CGRectContainsPoint(_confineRect, point)) {
+        _endPoint = point;
+        [self setNeedsDisplay];
     }
-//    NSLog(@"x=%f, y=%f\n",_endPoint.x, _endPoint.y);
-    [self setNeedsDisplay];
 }
 
 - (CGRect)selectedRect {
     return _selectedRect;
 }
+
+- (void)setConfineRect:(CGRect)rect {
+    _confineRect = rect;
+}
+
+
 
 
 @end

@@ -14,7 +14,7 @@
 }
 
 + (NSString *)convertImageToBase64:(UIImage *)image {
-    NSData * imageData = UIImageJPEGRepresentation(image, 1.0);
+    NSData * imageData = UIImageJPEGRepresentation(image, 0.8);//compress data
     NSString * base64 = [imageData base64EncodingWithLineLength:0];
     return base64;
 }

@@ -39,8 +39,14 @@
     CGContextSetFillColorWithColor(_context, [UIColor blackColor].CGColor);
     CGContextFillRect(_context, r);
     
-    CGContextSetFillColorWithColor( _context, [UIColor clearColor].CGColor );
+//    CGContextSetFillColorWithColor( _context, [UIColor clearColor].CGColor );
     CGContextClearRect(_context, rect);
+    
+    CGContextAddRect(_context,rect);
+    CGContextSetLineWidth(_context, 3);
+    CGContextSetRGBStrokeColor(_context, 1, 1, 1, 1);
+    CGContextStrokePath(_context);
+    
 
 }
 

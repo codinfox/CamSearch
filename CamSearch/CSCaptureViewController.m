@@ -17,6 +17,7 @@
 @implementation CSCaptureViewController {
     ImageSelectView * isv;
     ImageCutting * ic;
+    UIAlertView * av;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,6 +41,7 @@
     isv.userInteractionEnabled = NO;
     
     ic = nil;
+    av = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,10 +84,33 @@
 }
 
 - (IBAction)donePressed:(id)sender {
-    [[[UIAlertView alloc] initWithTitle:@"Success" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil] show];
-    UIImage * image = [ic cropImageWithRect:isv.selectedRect];
-    NSString * string = [ImageCutting convertImageToBase64:image];
-    NSLog(@"%@", string);
+//    [[[UIAlertView alloc] initWithTitle:@"Success" message:nil delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil] show];
+//    UIImage * image = [ic cropImageWithRect:isv.selectedRect];
+    [self showWaitingView];
+    
+}
+
+- (void)showWaitingView {
+    UIActivityIndicatorView * indicator;
+    if (av == nil) {
+        av = [[UIAlertView alloc] initWithTitle:@"Request is being processed.\nPlease wait ..." message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+        indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        NSLog(@"%f", av.frame.size.width);
+        [av show];
+        indicator.center = CGPointMake(av.frame.size.width/2 - 15, av.frame.size.height - 60);
+        [indicator startAnimating];
+        [av addSubview:indicator];
+        indicator = nil;
+    } else {
+        [av show];
+    }
+//    indicator.center = CGPointMake(av.frame.size.width/2, 100);
+//    NSLog(@"%f", av.frame.size.width);
+
+}
+
+- (void)dismissWaitingView {
+    [av dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 

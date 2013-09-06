@@ -27,8 +27,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self configVersionLabel];
+}
+
+- (void)configVersionLabel {
     NSString * version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    self.versionLabel.text = [NSString stringWithFormat:@"v%@", version];
+    NSString * build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    self.versionLabel.text = [NSString stringWithFormat:@"version %@ build %@", version, build];
 }
 
 - (void)didReceiveMemoryWarning

@@ -74,6 +74,7 @@
 
 - (void)setConfineRect:(CGRect)rect {
     _confineRect = rect;
+    _beginPoint = rect.origin;
 }
 
 

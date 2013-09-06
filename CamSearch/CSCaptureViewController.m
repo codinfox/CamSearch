@@ -10,6 +10,7 @@
 #import "ImageSelectView.h"
 #import "ImageCutting.h"
 #import "NetConn.h"
+#import "CSResultListViewController.h"
 
 @interface CSCaptureViewController ()
 
@@ -125,6 +126,9 @@
 
 - (void)requestDidProcessed {
     [self dismissWaitingView];
+    CSResultListViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"resultList"];
+    vc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)dismissWaitingView {

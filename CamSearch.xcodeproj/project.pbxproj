@@ -41,6 +41,9 @@
 		B57F609417D99C9000F3A5D6 /* ImageCutting.m in Sources */ = {isa = PBXBuildFile; fileRef = B57F609317D99C9000F3A5D6 /* ImageCutting.m */; };
 		B5F050AB17D9D2DE00D7DFAD /* NetConn.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F050AA17D9D2DE00D7DFAD /* NetConn.m */; };
 		B5F050AE17D9D3A400D7DFAD /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F050AD17D9D3A400D7DFAD /* NSData+Base64.m */; };
+		B5F050B217DA0A2F00D7DFAD /* CSResultListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F050B117DA0A2F00D7DFAD /* CSResultListViewController.m */; };
+		B5F050B517DA19CE00D7DFAD /* logo_revert.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F050B317DA19CE00D7DFAD /* logo_revert.png */; };
+		B5F050B617DA19CE00D7DFAD /* logo_revert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F050B417DA19CE00D7DFAD /* logo_revert@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,10 @@
 		B5F050AA17D9D2DE00D7DFAD /* NetConn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConn.m; sourceTree = "<group>"; };
 		B5F050AC17D9D3A400D7DFAD /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		B5F050AD17D9D3A400D7DFAD /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		B5F050B017DA0A2F00D7DFAD /* CSResultListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSResultListViewController.h; sourceTree = "<group>"; };
+		B5F050B117DA0A2F00D7DFAD /* CSResultListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSResultListViewController.m; sourceTree = "<group>"; };
+		B5F050B317DA19CE00D7DFAD /* logo_revert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_revert.png; sourceTree = "<group>"; };
+		B5F050B417DA19CE00D7DFAD /* logo_revert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_revert@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +179,8 @@
 				B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */,
 				B57F608F17D8DE4F00F3A5D6 /* ImageSelectView.h */,
 				B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */,
+				B5F050B017DA0A2F00D7DFAD /* CSResultListViewController.h */,
+				B5F050B117DA0A2F00D7DFAD /* CSResultListViewController.m */,
 				B57F609517D99C9700F3A5D6 /* Logic */,
 				B5F050AF17D9D3C500D7DFAD /* Category */,
 			);
@@ -216,6 +225,8 @@
 		B57F607017D815E200F3A5D6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B5F050B317DA19CE00D7DFAD /* logo_revert.png */,
+				B5F050B417DA19CE00D7DFAD /* logo_revert@2x.png */,
 				B57F608B17D863CF00F3A5D6 /* nav-item-back.png */,
 				B57F608C17D863CF00F3A5D6 /* nav-item-back@2x.png */,
 				B57F608117D821F400F3A5D6 /* main-start-button.png */,
@@ -339,6 +350,8 @@
 				B57F608417D821F400F3A5D6 /* main-start-button@2x.png in Resources */,
 				B57F608D17D863CF00F3A5D6 /* nav-item-back.png in Resources */,
 				B57F608E17D863CF00F3A5D6 /* nav-item-back@2x.png in Resources */,
+				B5F050B517DA19CE00D7DFAD /* logo_revert.png in Resources */,
+				B5F050B617DA19CE00D7DFAD /* logo_revert@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +395,7 @@
 				B57F609417D99C9000F3A5D6 /* ImageCutting.m in Sources */,
 				B5F050AB17D9D2DE00D7DFAD /* NetConn.m in Sources */,
 				B5F050AE17D9D3A400D7DFAD /* NSData+Base64.m in Sources */,
+				B5F050B217DA0A2F00D7DFAD /* CSResultListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

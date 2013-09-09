@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51D868817DD91E800D96B6B /* CSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51D868717DD91E800D96B6B /* CSRootViewController.m */; };
 		B57F602417D80F2400F3A5D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F602317D80F2400F3A5D6 /* UIKit.framework */; };
 		B57F602617D80F2400F3A5D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F602517D80F2400F3A5D6 /* Foundation.framework */; };
 		B57F602817D80F2400F3A5D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57F602717D80F2400F3A5D6 /* CoreGraphics.framework */; };
@@ -57,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B51D868617DD91E800D96B6B /* CSRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRootViewController.h; sourceTree = "<group>"; };
+		B51D868717DD91E800D96B6B /* CSRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRootViewController.m; sourceTree = "<group>"; };
 		B57F602017D80F2400F3A5D6 /* CamSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57F602317D80F2400F3A5D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B57F602517D80F2400F3A5D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -168,19 +171,7 @@
 			children = (
 				B57F602A17D80F2400F3A5D6 /* Supporting Files */,
 				B57F607017D815E200F3A5D6 /* Resource */,
-				B57F603217D80F2400F3A5D6 /* CSAppDelegate.h */,
-				B57F603317D80F2400F3A5D6 /* CSAppDelegate.m */,
-				B57F603B17D80F2400F3A5D6 /* MainStoryboard.storyboard */,
-				B57F603E17D80F2500F3A5D6 /* CSViewController.h */,
-				B57F603F17D80F2500F3A5D6 /* CSViewController.m */,
-				B57F608517D8264100F3A5D6 /* CSAboutViewController.h */,
-				B57F608617D8264100F3A5D6 /* CSAboutViewController.m */,
-				B57F608817D8608E00F3A5D6 /* CSCaptureViewController.h */,
-				B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */,
-				B57F608F17D8DE4F00F3A5D6 /* ImageSelectView.h */,
-				B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */,
-				B5F050B017DA0A2F00D7DFAD /* CSResultListViewController.h */,
-				B5F050B117DA0A2F00D7DFAD /* CSResultListViewController.m */,
+				B5F050B717DA245000D7DFAD /* Presentation */,
 				B57F609517D99C9700F3A5D6 /* Logic */,
 				B5F050AF17D9D3C500D7DFAD /* Category */,
 			);
@@ -259,6 +250,28 @@
 				B5F050AD17D9D3A400D7DFAD /* NSData+Base64.m */,
 			);
 			name = Category;
+			sourceTree = "<group>";
+		};
+		B5F050B717DA245000D7DFAD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B57F603217D80F2400F3A5D6 /* CSAppDelegate.h */,
+				B57F603317D80F2400F3A5D6 /* CSAppDelegate.m */,
+				B57F603B17D80F2400F3A5D6 /* MainStoryboard.storyboard */,
+				B57F603E17D80F2500F3A5D6 /* CSViewController.h */,
+				B57F603F17D80F2500F3A5D6 /* CSViewController.m */,
+				B57F608517D8264100F3A5D6 /* CSAboutViewController.h */,
+				B57F608617D8264100F3A5D6 /* CSAboutViewController.m */,
+				B57F608817D8608E00F3A5D6 /* CSCaptureViewController.h */,
+				B57F608917D8608E00F3A5D6 /* CSCaptureViewController.m */,
+				B57F608F17D8DE4F00F3A5D6 /* ImageSelectView.h */,
+				B57F609017D8DE4F00F3A5D6 /* ImageSelectView.m */,
+				B5F050B017DA0A2F00D7DFAD /* CSResultListViewController.h */,
+				B5F050B117DA0A2F00D7DFAD /* CSResultListViewController.m */,
+				B51D868617DD91E800D96B6B /* CSRootViewController.h */,
+				B51D868717DD91E800D96B6B /* CSRootViewController.m */,
+			);
+			name = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +409,7 @@
 				B5F050AB17D9D2DE00D7DFAD /* NetConn.m in Sources */,
 				B5F050AE17D9D3A400D7DFAD /* NSData+Base64.m in Sources */,
 				B5F050B217DA0A2F00D7DFAD /* CSResultListViewController.m in Sources */,
+				B51D868817DD91E800D96B6B /* CSRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

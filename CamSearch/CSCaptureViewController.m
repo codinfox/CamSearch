@@ -38,7 +38,8 @@
     self.imageView.image = self.image;
     self.doneButton.enabled = NO;
     
-    isv = [[ImageSelectView alloc] initWithFrame:CGRectMake(0, 44, 320, 480)];
+    CGSize ivSize = self.imageView.frame.size;
+    isv = [[ImageSelectView alloc] initWithFrame:CGRectMake(0, 44, ivSize.width, ivSize.height)];
     [self.view addSubview:isv];
     isv.userInteractionEnabled = NO;
     
